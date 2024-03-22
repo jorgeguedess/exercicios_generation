@@ -1,59 +1,10 @@
 # ATIVIDADE PRÁTICA – JAVASCRIPT
+## Laços Condicionais
 
 Exercícios resolvidos para a [Generation Brasil](https://brazil.generation.org/) e implementado em JavaScript.
 
-- [Variaveis e Operadores](#variaveis-e-operadores)
-- [Lacos Condicionais](#lacos-condicionais)
 
-### Variaveis e Operadores
-
-#### [Exercicio 01](1_Variaveis_Operadores/ex01.js)
-
-Dado o Fluxograma abaixo, desenvolva o algoritmo abaixo: 
-
-
-<div align="center">
-
-![Início -> Digite o Salário -> Leia o Salário -> Digite o Abono: -> Leia o Abono -> NovoSalario = Salário + Abono -> Exibe o NovoSalario -> Fim](https://res.cloudinary.com/dklehn5qt/image/upload/v1710984083/generation_brasil/exercicios/javascript/01_entrada_saida_operadores/ex01-fluxograma_esyrya.png
-)
-![Entrada -> Salário: 10000; Abono: 1000; Saida -> Novo Salário: 11000](https://res.cloudinary.com/dklehn5qt/image/upload/v1710984083/generation_brasil/exercicios/javascript/01_entrada_saida_operadores/ex01_xdbmj8.png)
-
-</div>
-
-As variáveis devem ser do tipo **float**.
-<br/>
-
-#### [Exercicio 02](1_Variaveis_Operadores/ex02.js)
-
-Elabore um algoritmo que leia 4 notas de um participante, em variáveis do tipo float e exiba na tela a média final do participante. Veja o exemplo abaixo:
-
-![Entrada -> Nota 1: 10; Nota 2: 8; Nota 3: 7; Nota 4: 7.5; Saida -> Média final: 8.1](https://res.cloudinary.com/dklehn5qt/image/upload/v1710984083/generation_brasil/exercicios/javascript/01_entrada_saida_operadores/ex02_r3sdwt.png)
-
-**CALCULAR MÉDIA** = (NOTA1 + NOTA2 + NOTA3 + NOTA4) / 4
-
-<br/>
-
-#### [Exercicio 03](1_Variaveis_Operadores/ex03.js)
-
-Elabore um algoritmo que leia o Salário Bruto, o Adicional Noturno, as Horas Extras e os Descontos de um Colaborador, em variáveis do tipo float e exiba na tela o Salário Líquido. Veja o exemplo abaixo:
-
-![Entrada -> Salário Bruto: 2000; Adicional Noturno: 500; Horas Extras: 100; Descontos: 200; Saida -> Salário Líquido: 2800](https://res.cloudinary.com/dklehn5qt/image/upload/v1710984083/generation_brasil/exercicios/javascript/01_entrada_saida_operadores/ex03_cvqrae.png)
-
-**SALÁRIO LÍQUIDO** = SALÁRIO BRUTO + ADICIONAL NOTURNO + (HORAS EXTRAS * 5) - DESCONTOS
-
-<br/>
-
-#### [Exercicio 04](1_Variaveis_Operadores/ex04.js)
-
-Leia quatro valores float (n1, n2, n3, n4). A seguir, calcule e mostre a diferença do produto entre o n1 e n2 pelo produto entre o n3 e o n4. Veja os exemplos abaixo:
-
-![Entrada -> numero1: 5; numero2: 6; numero3: 7; numero4: 8; Saida -> Diferença: -26](https://res.cloudinary.com/dklehn5qt/image/upload/v1710984083/generation_brasil/exercicios/javascript/01_entrada_saida_operadores/ex04_grsncv.png)
-
-**CALCULO** = (n1 * n2) – (n3 * n4)
-
-### Lacos Condicionais
-
-#### [Exercicio 01](2_Lacos_Condicionais/ex01.js)
+#### [Exercicio 01](ex01.js)
 
 Faça um algoritmo em Java que leia 3 valores inteiros A, B e C e imprima na tela se a soma de A + B é maior, menor ou igual a C.
 
@@ -67,7 +18,7 @@ Na construção do Algoritmo, utilize os seguintes conteúdos:
 
 <br/>
 
-#### [Exercicio 02](2_Lacos_Condicionais/ex02.js)
+#### [Exercicio 02](ex02.js)
 
 Escreva um algoritmo em Java, que leia um número inteiro via teclado e mostre na tela uma mensagem indicando se este número é par ou ímpar e se o número é positivo ou negativo. Veja os exemplos abaixo:
 
@@ -80,7 +31,7 @@ Na construção do Algoritmo, utilize os seguintes conteúdos:
 
 <br/>
 
-#### [Exercicio 03](2_Lacos_Condicionais/ex03.js)
+#### [Exercicio 03](ex03.js)
 
 Para doar sangue é necessário ter entre 18 e 69 anos de idade. Pessoas com idade entre 60 e 69 anos, só podem doar se não for a sua primeira doação. Escreva um Algoritmo em Java que obtenha via teclado o nome do doador (String), a idade (inteiro) do doador e se é a primeira doação (boolean). De acordo com as Regras para a doação, mostre na tela se o doador está Apto ou Não Apto para doar sangue. Veja os exemplos abaixo:
 
@@ -91,7 +42,7 @@ Na construção do Algoritmo, utilize os seguintes conteúdos:
 - Operadores
 - **Laço Condicional IF**
 
-#### [Exercicio 04](2_Lacos_Condicionais/ex04.js)
+#### [Exercicio 04](ex04.js)
 
 Escreva um algoritmo em Java, que leia 3 palavras (String), que definem as características de um tipo de animal possível segundo o diagrama abaixo, que deve ser lido da esquerda para a direita.
 
@@ -108,7 +59,7 @@ Na construção do Algoritmo, utilize os seguintes conteúdos:
 - **Laço Condicional IF**
 - **No JavaScript, utilize o Operador Estritamente Igual (===)**
 
-#### [Exercicio 05](2_Lacos_Condicionais/ex05.js)
+#### [Exercicio 05](ex05.js)
 
 Com base na tabela abaixo, escreva um algoritmo em Java que leia o código de um item (número inteiro de 1 a 6) e a quantidade comprada deste item (número inteiro). A seguir, mostre na tela o valor total da conta e o nome do produto que foi comprado.
 
@@ -126,7 +77,7 @@ Na construção do Algoritmo, utilize os seguintes conteúdos:
 - Operadores
 - **Laço Condicional Switch**
 
-#### [Exercicio 06](2_Lacos_Condicionais/ex06.js)
+#### [Exercicio 06](ex06.js)
 
 Com base na tabela abaixo, escreva um algoritmo em Java que leia o Nome do Colaborador (String), o Código do Cargo do Colaborador (número inteiro de 1 a 6) e o Salário (número float). A seguir, mostre na tela o Nome do Colaborador, o Cargo e o novo Salário reajustado.
 
@@ -144,7 +95,7 @@ Na construção do Algoritmo, utilize os seguintes conteúdos:
 - Operadores
 - **Laço Condicional Switch**
 
-#### [Exercicio 07](2_Lacos_Condicionais/ex07.js)
+#### [Exercicio 07](ex07.js)
 
 Com base na tabela abaixo, escreva um algoritmo em Java, que simule uma Calculadora simples. O programa deverá ler dois números float: **numero1** e **numero2**, e na sequência ler o Código da operação matemática (número inteiro de 1 a 4). A seguir, mostre na tela o resultado da operação entre os 2 números. Caso a operação seja diferente do intervalo 1 a 4, mostre a mensagem **Operação Inválida!**
 
@@ -160,7 +111,7 @@ Na construção do Algoritmo, utilize os seguintes conteúdos:
 - Operadores
 - **Laço Condicional Switch**
 
-#### [Exercicio 08](2_Lacos_Condicionais/ex08.js)
+#### [Exercicio 08](ex08.js)
 
 Desenvolva um algoritmo em Java para uma conta bancária. O programa deverá ler o tipo de operação a ser realizada com base na tabela abaixo (número inteiro entre 1 e 3) e o valor a ser depositado ou sacado (somente nas opções 2 e 3). Considere que um saque só pode ser realizado caso haja saldo suficiente. Ao final de cada operação, exiba o novo Saldo na tela. A variável saldo (float), será inicializada com o valor de R$ 1000.00. Caso a operação seja diferente do intervalo 1 a 3, mostre a mensagem **Operação Inválida!**
 
