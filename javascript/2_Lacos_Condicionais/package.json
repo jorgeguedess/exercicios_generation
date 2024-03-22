@@ -1,0 +1,11 @@
+{
+  "name": "2_lacos_condicionais",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "Jorge Guedes",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
