@@ -4,8 +4,7 @@
 Exercícios resolvidos para a [Generation Brasil](https://brazil.generation.org/) e implementado em JavaScript.
 
 
-
-#### [Exercicio 01](ex01_novo_salario.js)
+#### [Exercicio 01](ex01.js)
 
 Dado o Fluxograma abaixo, desenvolva o algoritmo abaixo: 
 
@@ -21,7 +20,7 @@ Dado o Fluxograma abaixo, desenvolva o algoritmo abaixo:
 As variáveis devem ser do tipo **float**.
 <br/>
 
-#### [Exercicio 02](ex02_media.js)
+#### [Exercicio 02](ex02.js)
 
 Elabore um algoritmo que leia 4 notas de um participante, em variáveis do tipo float e exiba na tela a média final do participante. Veja o exemplo abaixo:
 
@@ -31,7 +30,7 @@ Elabore um algoritmo que leia 4 notas de um participante, em variáveis do tipo 
 
 <br/>
 
-#### [Exercicio 03](ex03_salario_liquido.js)
+#### [Exercicio 03](ex03.js)
 
 Elabore um algoritmo que leia o Salário Bruto, o Adicional Noturno, as Horas Extras e os Descontos de um Colaborador, em variáveis do tipo float e exiba na tela o Salário Líquido. Veja o exemplo abaixo:
 
@@ -41,7 +40,7 @@ Elabore um algoritmo que leia o Salário Bruto, o Adicional Noturno, as Horas Ex
 
 <br/>
 
-#### [Exercicio 04](ex04_diferenca_produto.js)
+#### [Exercicio 04](ex04.js)
 
 Leia quatro valores float (n1, n2, n3, n4). A seguir, calcule e mostre a diferença do produto entre o n1 e n2 pelo produto entre o n3 e o n4. Veja os exemplos abaixo:
 
