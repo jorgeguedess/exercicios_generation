@@ -1,52 +1,52 @@
-const leia = require("readline-sync");
+const input = require("readline-sync");
 
-const opcao1 = ["vertebrado", "invertebrado"];
-const opcao2 = ["ave", "mamifero", "inseto", "anelideo"];
-const opcao3 = ["carnivoro", "onivoro", "herbivoro", "hematofago"];
+const opcoes = [
+  ["vertebrado", "invertebrado"],
+  ["ave", "mamifero", "inseto", "anelideo"],
+  ["carnivoro", "onivoro", "herbivoro", "hematofago"],
+];
+
+const animais = {
+  vertebrado: {
+    ave: {
+      carnivoro: "Águia",
+      onivoro: "Pomba",
+    },
+    mamifero: {
+      onivoro: "Homem",
+      herbivoro: "Vaca",
+    },
+  },
+  invertebrado: {
+    inseto: {
+      hematofago: "Pulga",
+      herbivoro: "Lagarta",
+    },
+    anelideo: {
+      hematofago: "Sanguessuga",
+      onivoro: "Minhoca",
+    },
+  },
+};
 
 function messageError(arrayOption = []) {
-  return `\nOpção inválida. [${arrayOption.join(" / ")}]`;
+  return `Opção inválida. [${arrayOption.join(" / ")}]\n`;
 }
 
-const palavra1 = leia.question("Digite a 1ª palavra: ", {
-  limit: opcao1,
-  limitMessage: messageError(opcao1),
-});
-const palavra2 = leia.question("Digite a 2ª palavra: ", {
-  limit: opcao2,
-  limitMessage: messageError(opcao2),
-});
-const palavra3 = leia.question("Digite a 3ª palavra: ", {
-  limit: opcao3,
-  limitMessage: messageError(opcao3),
-});
-
-if (palavra1 === "vertebrado") {
-  if (palavra2 === "ave") {
-    if (palavra3 === "carnivoro") {
-      console.log("Águia");
-    } else {
-      console.log("Pomba");
-    }
-  } else {
-    if (palavra3 === "herbivoro") {
-      console.log("Vaca");
-    } else {
-      console.log("Homem");
-    }
-  }
-} else {
-  if (palavra2 === "inseto") {
-    if (palavra3 === "herbivoro") {
-      console.log("Lagarta");
-    } else {
-      console.log("Pulga");
-    }
-  } else {
-    if (palavra3 === "onivoro") {
-      console.log("Minhoca");
-    } else {
-      console.log("Sanguessuga");
-    }
-  }
+function inputQuestion(prompt, opcoes) {
+  return input.question(prompt, {
+    limit: opcoes,
+    limitMessage: messageError(opcoes),
+  });
 }
+
+const palavras = Array.from({ length: 3 }, (_, i) =>
+  inputQuestion(
+    `Digite a ${i + 1}ª palavra [${opcoes[i].join(" / ")}]: `,
+    opcoes[i]
+  )
+);
+
+const animal =
+  animais[palavras[0]]?.[palavras[1]]?.[palavras[2]] ?? "Animal não encontrado";
+console.log(`\n${animal}`);

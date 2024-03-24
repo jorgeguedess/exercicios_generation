@@ -1,13 +1,19 @@
-const leia = require("readline-sync");
+const input = require("readline-sync");
 
-const numeroA = leia.questionInt("Digite o número A: ");
-const numeroB = leia.questionInt("Digite o número B: ");
-const numeroC = leia.questionInt("Digite o número C: ");
+const letters = ["A", "B", "C"];
+const numbers = letters.map((letter) =>
+  input.questionInt(`Digite o número ${letter}: `, {
+    limitMessage: "Valor inválido.\n",
+  })
+);
 
-if (numeroA + numeroB > numeroC) {
-  console.log("A Soma de A + B é Maior do que C");
-} else if (numeroA + numeroB < numeroC) {
-  console.log("A Soma de A + B é Menor do que C");
-} else if (numeroA + numeroB === numeroC) {
-  console.log("A Soma de A + B é Igual a C");
+const sumAB = numbers[0] + numbers[1];
+const numberC = numbers[2];
+
+if (sumAB > numberC) {
+  console.log("\nA Soma de A + B é Maior do que C");
+} else if (sumAB < numberC) {
+  console.log("\nA Soma de A + B é Menor do que C");
+} else {
+  console.log("\nA Soma de A + B é Igual a C");
 }

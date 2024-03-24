@@ -1,42 +1,83 @@
-const leia = require("readline-sync");
+const input = require("readline-sync");
 
-console.log(`
-    \x1b[1mCódigo da Operação\x1b[0m\t| \x1b[1mOperação\x1b[0m\t|
-    ------------------\t| -------------\t|
-    \x1b[1m1\x1b[0m\t\t\t| Saldo \t| 
-    \x1b[1m2\x1b[0m\t\t\t| Saque\t\t| 
-    \x1b[1m3\x1b[0m\t\t\t| Depósito\t|
-`);
+let balance = 1000;
 
-const saldo = 1000;
-const operacao = leia.questionInt("Digite a opcao desejada: ");
+function displayMenu() {
+  console.log(`
+  \x1b[1mCódigo da Operação\x1b[0m\t| \x1b[1mOperação\x1b[0m\t|
+  ------------------\t| -------------\t|
+  \x1b[1m1\x1b[0m\t\t\t| Saldo \t| 
+  \x1b[1m2\x1b[0m\t\t\t| Saque\t\t| 
+  \x1b[1m3\x1b[0m\t\t\t| Depósito\t|`);
+}
 
-switch (operacao) {
-  case 1:
-    console.log("Operação - Saldo");
-    console.log(`Saldo: R$ ${saldo.toFixed(2)}`);
-    break;
+function displayBalance() {
+  console.log(`\nSaldo: R$ ${balance.toFixed(2)}`);
+}
 
-  case 2:
-    console.log("Operação - Saque");
-    const valor = leia.questionFloat("Valor: R$ ");
+function withdraw() {
+  const value = inputFloat("Valor: R$ ", "Valor inválido!\n");
 
-    if (saldo > valor) {
-      const novoSaldo = (saldo - valor).toFixed(2);
-      console.log(`\nNovo Saldo: R$ ${novoSaldo}`);
-    } else {
-      console.log("\nSaldo Insuficiente!");
+  if (balance >= value) {
+    balance -= value;
+    console.log(`\nNovo Saldo: R$ ${balance.toFixed(2)}`);
+  } else {
+    console.log("\nSaldo Insuficiente!");
+  }
+}
+
+function deposit() {
+  const valueDeposit = inputFloat("Valor: R$ ", "Valor inválido!\n");
+  balance += valueDeposit;
+  console.log(`\nNovo Saldo: R$ ${balance.toFixed(2)}`);
+}
+
+function processOperation(operation) {
+  switch (operation) {
+    case 1:
+      console.log("Operação - Saldo");
+      displayBalance();
+      break;
+    case 2:
+      console.log("Operação - Saque");
+      withdraw();
+      break;
+    case 3:
+      console.log("Operação - Depósito");
+      deposit();
+      break;
+    default:
+      console.log("Opção inválida!");
+      break;
+  }
+}
+
+displayMenu();
+const operation = inputInt("Digite a opção desejada: ", "Opção inválida!\n");
+processOperation(operation);
+
+function inputInt(message = "", limitMessage = "") {
+  let value;
+  do {
+    value = input.questionInt(message, {
+      limitMessage,
+    });
+    if (value <= 0) {
+      console.log(limitMessage);
     }
-    break;
+  } while (isNaN(value) || value <= 0);
+  return value;
+}
 
-  case 3:
-    console.log("Operação - Depósito");
-    const deposito = leia.questionFloat("Valor: R$ ");
-    const novoSaldo = saldo + deposito;
-    console.log(`\nNovo Saldo: R$ ${novoSaldo}`);
-    break;
-
-  default:
-    console.log("Opção inválida!");
-    break;
+function inputFloat(message = "", limitMessage = "") {
+  let value;
+  do {
+    value = input.questionFloat(message, {
+      limitMessage,
+    });
+    if (value <= 0) {
+      console.log(limitMessage);
+    }
+  } while (isNaN(value) || value <= 0);
+  return value;
 }
