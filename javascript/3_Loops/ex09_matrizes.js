@@ -1,41 +1,49 @@
-const leia = require("readline-sync");
+const input = require("readline-sync");
 
-const matriz = new Array(3);
-const diagonalPrincipal = [];
-const diagonalSecundaria = [];
+const QUANTITY = 3;
 
-let somaDiagonalPrincipal = 0;
-let somaDiagonalSecundaria = 0;
+const matrix = [];
+const mainDiagonal = [];
+const secondaryDiagonal = [];
 
-for (let linha = 0; linha < matriz.length; linha++) {
-  matriz[linha] = Array(3);
-}
+let mainDiagonalSum = 0;
+let secondaryDiagonalSum = 0;
 
-for (let linha = 0; linha < matriz.length; linha++) {
-  for (let coluna = 0; coluna < matriz.length; coluna++) {
-    matriz[linha][coluna] = leia.questionInt(
-      `Digite o numero do elemento [${linha}][${coluna}]: `
-    );
+function createMatrix() {
+  for (let i = 0; i < QUANTITY; i++) {
+    matrix[i] = [];
+    for (let j = 0; j < QUANTITY; j++) {
+      matrix[i][j] = input.questionInt(
+        `Digite o numero do elemento [${i}][${j}]: `,
+        {
+          limitMessage: "Valor Inválido!\n",
+        }
+      );
+    }
   }
 }
 
-for (let linha = 0; linha < 3; linha++) {
-  diagonalPrincipal.push(matriz[linha][linha]);
-  diagonalSecundaria.push(matriz[linha][2 - linha]);
+function calculateDiagonals() {
+  for (let i = 0; i < QUANTITY; i++) {
+    mainDiagonal.push(matrix[i][i]);
+    secondaryDiagonal.push(matrix[i][2 - i]);
 
-  somaDiagonalPrincipal += matriz[linha][linha];
-  somaDiagonalSecundaria += matriz[linha][2 - linha];
+    mainDiagonalSum += matrix[i][i];
+    secondaryDiagonalSum += matrix[i][2 - i];
+  }
 }
 
-console.log(
-  `\nElementos da Diagonal Principal: ${diagonalPrincipal.join(" ")}`
-);
-console.log(
-  `Elementos da Diagonal Secundária: ${diagonalSecundaria.join(" ")}`
-);
-console.log(
-  `Soma dos Elementos da Diagonal Principal: ${somaDiagonalPrincipal}`
-);
-console.log(
-  `Soma dos Elementos da Diagonal Secundária: ${somaDiagonalSecundaria}`
-);
+function displayResults() {
+  console.log(`\nElementos da Diagonal Principal: ${mainDiagonal.join(" ")}`);
+  console.log(
+    `Elementos da Diagonal Secundária: ${secondaryDiagonal.join(" ")}`
+  );
+  console.log(`Soma dos Elementos da Diagonal Principal: ${mainDiagonalSum}`);
+  console.log(
+    `Soma dos Elementos da Diagonal Secundária: ${secondaryDiagonalSum}`
+  );
+}
+
+createMatrix();
+calculateDiagonals();
+displayResults();

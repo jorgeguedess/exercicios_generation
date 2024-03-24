@@ -1,21 +1,21 @@
-const leia = require("readline-sync");
+const input = require("readline-sync");
 
-let numero = 0;
-let soma = 0;
+let number;
+let sum = 0;
 let total = 0;
 
 do {
-  numero = leia.questionInt("Digite um número (0 para sair): ");
-  if (numero > 0) {
-    if (numero % 3 == 0) {
-      total += 1;
-      soma += numero;
-    }
+  number = input.questionInt("Digite um número (0 para sair): ", {
+    limitMessage: "Valor inválido!\n",
+  });
+  if (number > 0 && number % 3 == 0) {
+    total++;
+    sum += number;
   }
-} while (numero !== 0);
+} while (number !== 0);
 
-const media = soma / total;
+const average = total !== 0 ? sum / total : 0;
 
 console.log(
-  `\nA média de todos os números múltiplos de 3 é: ${media.toFixed(2)}`
+  `\nA média de todos os números múltiplos de 3 é: ${average.toFixed(2)}`
 );

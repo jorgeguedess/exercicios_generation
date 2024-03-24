@@ -1,31 +1,27 @@
-const leia = require("readline-sync");
+const input = require("readline-sync");
 
-let numeros = [];
-let impares = [];
-let pares = [];
-let soma = 0;
-let media = 0;
+const TOTALNUMBERS = 10;
+const numbers = [];
+const odd = [];
+const pairs = [];
 
-let indexImpar = 0;
-let indexPar = 0;
+let sum = 0;
 
-for (let index = 0; index < 10; index++) {
-  numeros[index] = leia.questionInt(`Digite o ${index + 1}º número: `);
+for (let index = 0; index < TOTALNUMBERS; index++) {
+  const number = input.questionInt(`Digite o ${index + 1}º número: `, {
+    limitMessage: "Valor inválido!\n",
+  });
+  numbers.push(number);
 
-  if (index % 2 !== 0) {
-    impares[indexImpar] = numeros[index];
-    indexImpar++;
-  }
-  if (numeros[index] % 2 === 0) {
-    pares[indexPar] = numeros[index];
-    indexPar++;
-  }
-  soma += numeros[index];
+  index % 2 !== 0 && odd.push(number);
+  numbers[index] % 2 === 0 && pairs.push(number);
+
+  sum += number;
 }
 
-media = soma / 10;
+const average = (sum / TOTALNUMBERS).toFixed(1);
 
-console.log(`Elementos nos índices ímpares: ${impares.join(" ")}`);
-console.log(`Elementos pares: ${pares.join(" ")}`);
-console.log(`Soma: ${soma}`);
-console.log(`Média: ${media}`);
+console.log(`\nElementos nos índices ímpares: ${odd.join(" ")}`);
+console.log(`Elementos pares: ${pairs.join(" ")}`);
+console.log(`Soma: ${sum}`);
+console.log(`Média: ${average}`);

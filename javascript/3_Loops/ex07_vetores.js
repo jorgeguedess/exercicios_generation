@@ -1,18 +1,17 @@
-const leia = require("readline-sync");
+const input = require("readline-sync");
 
-const numeros = [2, 5, 1, 3, 4, 9, 7, 8, 10, 6];
-console.log(`Números: [${numeros}]`);
+const numbers = [2, 5, 1, 3, 4, 9, 7, 8, 10, 6];
+console.log(`Números: [${numbers}]`);
 
-const numero = leia.questionInt(
-  "\nDigite o número que você deseja encontrar: "
+const number = input.questionInt(
+  "\nDigite o número que você deseja encontrar: ",
+  {
+    limitMessage: "Valor inválido!\n",
+  }
 );
 
-if (numeros.includes(numero)) {
-  for (let index = 0; index < numeros.length; index++) {
-    if (numeros[index] === numero) {
-      console.log(`O número ${numero} está localizado na posição: ${index}`);
-    }
-  }
-} else {
-  console.log(`O número ${numero} não foi encontrado!`);
-}
+const index = numbers.indexOf(number);
+
+index !== -1
+  ? console.log(`\nO número ${number} está localizado na posição: ${index}`)
+  : console.log(`\nO número ${number} não foi encontrado!`);

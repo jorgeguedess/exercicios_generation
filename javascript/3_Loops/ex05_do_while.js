@@ -1,11 +1,13 @@
-const leia = require("readline-sync");
+const input = require("readline-sync");
 
-let numero = 0;
-let soma = 0;
+let number = 0;
+let sum = 0;
 
 do {
-  numero = leia.questionInt("Digite um número (0 para sair): ");
-  if (numero > 0) soma += numero;
-} while (numero !== 0);
+  number = input.questionInt("Digite um número (0 para sair): ", {
+    limitMessage: "Valor inválido!\n",
+  });
+  if (number > 0) sum += number;
+} while (number !== 0);
 
-console.log(`\nA soma dos números positivos é: ${soma}`);
+console.log(`\nA soma dos números positivos é: ${sum}`);
