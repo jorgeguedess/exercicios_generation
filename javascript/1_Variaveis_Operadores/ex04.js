@@ -1,10 +1,15 @@
-let leia = require("readline-sync");
+const input = require("readline-sync");
 
-let numero1 = leia.questionFloat("1º numero: ");
-let numero2 = leia.questionFloat("2º numero: ");
-let numero3 = leia.questionFloat("3º numero: ");
-let numero4 = leia.questionFloat("4º numero: ");
+const numbers = [];
 
-let calculo = numero1 * numero2 - numero3 * numero4;
+const calculateDifference = (numbers = []) =>
+  numbers[0] * numbers[1] - numbers[2] * numbers[3];
 
-console.log("\nDiferença:", calculo);
+for (let i = 0; i < 4; i++) {
+  numbers[i] = input.questionFloat(`${i + 1}º número: `, {
+    limitMessage: "Valor inválido.\n",
+  });
+}
+
+const difference = calculateDifference(numbers);
+console.log(`\nDiferença: ${difference}`);

@@ -1,10 +1,22 @@
-let leia = require("readline-sync");
+const input = require("readline-sync");
 
-let nota1 = leia.questionFloat("1º Nota: ");
-let nota2 = leia.questionFloat("2º Nota: ");
-let nota3 = leia.questionFloat("3º Nota: ");
-let nota4 = leia.questionFloat("4º Nota: ");
+const amountGrades = 4;
+let sumGrades = 0;
 
-let media = (nota1 + nota2 + nota3 + nota4) / 4;
+const isInvalidGrade = (grade = 0) => grade < 0 || grade > 10;
 
-console.log("\nMédia final:", media.toFixed(1));
+for (let i = 0; i < amountGrades; i++) {
+  let grade = 0;
+  do {
+    grade = input.questionFloat(`${i + 1}ª Nota: `, {
+      limitMessage: "Nota inválida. Digite de 0 a 10.",
+    });
+    if (isInvalidGrade(grade)) {
+      console.log("Nota inválida. Digite de 0 a 10.");
+    }
+  } while (isInvalidGrade(grade));
+  sumGrades += grade;
+}
+
+const average = sumGrades / amountGrades;
+console.log("\nMédia final:", average.toFixed(1));
