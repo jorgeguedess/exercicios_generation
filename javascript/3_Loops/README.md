@@ -60,8 +60,10 @@ Uma empresa desenvolveu uma pesquisa interna para conhecer os colaboradores da �
     - 4 – Mulher Trans
     - 5 – Homem Trans
     - 6 – Outros
+    
     <br/>
-    - **Pessoa Desenvolvedora (Número Inteiro)**:
+
+- **Pessoa Desenvolvedora (Número Inteiro)**:
     - 1 – Backend
     - 2 – Frontntend
     - 3 – Mobile
