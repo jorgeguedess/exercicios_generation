@@ -1,13 +1,13 @@
 {
-  "name": "1_variaveis_operadores",
+  "name": "javascript",
   "version": "1.0.0",
   "description": "Exercícios resolvidos para a [Generation Brasil](https://brazil.generation.org/) e implementado em JavaScript.",
-  "main": "ex01.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Jorge Guedes",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "readline-sync": "^1.4.10"

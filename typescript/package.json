@@ -1,0 +1,17 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "Exercícios resolvidos para a [Generation Brasil](https://brazil.generation.org/) e implementado em TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.12.3",
+    "@types/readline-sync": "^1.4.8",
+    "readline-sync": "^1.4.10"
+  }
+}
