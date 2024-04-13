@@ -1,125 +1,11 @@
 # ATIVIDADE PRÁTICA – SQL
+## Join
 
 Exercícios resolvidos para a [Generation Brasil](https://brazil.generation.org/) e implementado com SQL.
 
-- [Introducao](#introducao)
-- [Join](#join)
-
-
 <br/>
 
-### Introducao
-
-#### [Exercicio 01](1_Introducao/ex01.sql)
-
-<ol style="display:flex;flex-direction:column;gap:0.5rem;">
-
-<li>
-Crie um banco de dados para um serviço de RH de uma empresa, onde o sistema trabalhará com as informações dos colaboradores desta empresa. 
-</li>
-
-<li>
-Crie uma tabela de colaboradores e determine 5 atributos relevantes dos colaboradores para se trabalhar com o serviço deste RH.
-</li>
-
-<li>
-Insira nesta tabela no mínimo 5 dados (registros).
-</li>
-
-<li>
-Faça um SELECT que retorne todes os colaboradores com o salário maior do que 2000.
-</li>
-
-<li>
-Faça um SELECT que retorne todes os colaboradores com o salário menor do que 2000.
-</li>
-
-<li>
-Ao término atualize um registro desta tabela através de uma query de atualização.
-</li>
-
-<li>
-Salve todas as queries para cada um dos requisitos do exercício em um único script (arquivo .SQL) e coloque no seu Github pessoal, no repositório que você criou sobre Banco de dados.
-</li>
-
-</ol>
-
-<br/>
-
-#### [Exercicio 02](1_Introducao/ex02.sql)
-
-<ol style="display:flex;flex-direction:column;gap:0.5rem;">
-
-<li>
-Crie um banco de dados para um e-commerce, onde o sistema trabalhará com as informações dos produtos deste e-commerce. 
-</li>
-
-<li>
-Crie uma tabela de produtos e determine 5 atributos relevantes dos produtos para se trabalhar com o serviço deste e-commerce.
-</li>
-
-<li>
-Insira nesta tabela no mínimo 8 dados (registros).</li>
-
-<li>
-Faça um SELECT que retorne todes os produtos com o valor maior do que 500.
-</li>
-
-<li>
-Faça um SELECT que retorne todes os produtos com o valor menor do que 500.
-</li>
-
-<li>
-Ao término atualize um registro desta tabela através de uma query de atualização.
-</li>
-
-<li>
-Salve todas as queries para cada um dos requisitos do exercício em um único script (arquivo .SQL) e coloque no seu Github pessoal, no repositório que você criou sobre Banco de dados.
-</li>
-
-</ol>
-
-<br/>
-
-#### [Exercicio 03](1_Introducao/ex03.sql)
-
-<ol style="display:flex;flex-direction:column;gap:0.5rem;">
-
-<li>
-Crie um banco de dados para um registro de uma escola, onde o sistema trabalhará com as informações dos estudantes deste registro dessa escola. 
-</li>
-
-<li>
-Crie uma tabela estudantes e utilizando a habilidade de abstração e determine 5 atributos relevantes dos estudantes para se trabalhar com o serviço dessa escola.
-</li>
-
-<li>
-Insira nesta tabela no mínimo 8 dados (registros).
-</li>
-
-<li>
-Faça um SELECT que retorne todes o/a(s) estudantes com a nota maior do que 7.0.
-</li>
-
-<li>
-Faça um SELECT que retorne todes o/a(s) estudantes com a nota menor do que 7.0.
-</li>
-
-<li>
-Ao término atualize um registro desta tabela através de uma query de atualização.
-</li>
-
-<li>
-Salve todas as queries para cada um dos requisitos do exercício em um único script (arquivo .SQL) e coloque no seu Github pessoal, no repositório que você criou sobre Banco de dados.
-</li>
-
-</ol>
-
-<br/>
-
-### Join
-
-#### [Exercicio 01](2_Join/ex01.sql)
+#### [Exercicio 01](ex01.sql)
 
 Crie um banco de dados para um serviço de um Games Online. O nome do Banco de dados deverá ter o seguinte nome **db_generation_game_online**. O sistema trabalhará com as informações dos personagens do jogo. O sistema trabalhará com 2 tabelas **tb_personagens** e tb_classes, que deverão estar relacionadas.
 
@@ -173,7 +59,7 @@ Faça um SELECT utilizando a cláusula INNER JOIN, unindo os dados da tabela tb_
 
 <br/>
 
-#### [Exercicio 02](2_Join/ex02.sql)
+#### [Exercicio 02](ex02.sql)
 
 Crie um banco de dados para um serviço de uma Pizzaria. O nome do Banco de dados deverá ter o seguinte nome **db_pizzaria_legal**. O sistema trabalhará com as informações dos produtos comercializados pela empresa. O sistema trabalhará com 2 tabelas **tb_pizzas** e **tb_categorias**, que deverão estar relacionadas.
 
@@ -198,7 +84,7 @@ Crie um banco de dados para um serviço de uma Pizzaria. O nome do Banco de dado
 
 <br/>
 
-#### [Exercicio 03](2_Join/ex03.sql)
+#### [Exercicio 03](ex03.sql)
 
 Crie um banco de dados para um serviço de uma Farmácia. O nome do Banco de dados deverá ter o seguinte nome **db_farmacia_bem_estar**. O sistema trabalhará com as informações dos produtos comercializados pela empresa. O sistema trabalhará com 2 tabelas **tb_produtos** e **tb_categorias**, que deverão estar relacionadas.
 
@@ -222,7 +108,7 @@ Crie um banco de dados para um serviço de uma Farmácia. O nome do Banco de dad
 
 <br/>
 
-#### [Exercicio 04](2_Join/ex04.sql)
+#### [Exercicio 04](ex04.sql)
 
 Crie um banco de dados para um serviço de um Açougue ou de um Hortifruti. O nome do Banco de dados deverá ter o seguinte nome **db_cidade_das_carnes** ou **cidade_dos_vegetais**. O sistema trabalhará com as informações dos produtos comercializados pela empresa. O sistema trabalhará com 2 tabelas **tb_produtos** e **tb_categorias**, que deverão estar relacionadas.
 
@@ -245,7 +131,7 @@ Crie um banco de dados para um serviço de um Açougue ou de um Hortifruti. O no
 
 <br/>
 
-#### [Exercicio 05](2_Join/ex05.sql)
+#### [Exercicio 05](ex05.sql)
 
 Crie um banco de dados para um serviço de uma loja de Material de Construção. O nome do Banco de dados deverá ter o seguinte nome **db_construindo_vidas**. O sistema trabalhará com as informações dos produtos comercializados pela empresa. O sistema trabalhará com 2 tabelas **tb_produtos** e **tb_categorias**, que deverão estar relacionadas.
 
@@ -268,7 +154,7 @@ Crie um banco de dados para um serviço de uma loja de Material de Construção.
 
 <br/>
 
-#### [Exercicio 06](2_Join/ex06.sql)
+#### [Exercicio 06](ex06.sql)
 
 Crie um banco de dados para uma plataforma de Cursos Online (EAD). O nome do Banco de dados deverá ter o seguinte nome **db_curso_da_minha_vida**. O sistema trabalhará com as informações dos produtos comercializados pela empresa. O sistema trabalhará com 2 tabelas **tb_cursos** e **tb_categorias**, que deverão estar relacionadas.
 
